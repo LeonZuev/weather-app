@@ -6,7 +6,7 @@ async function loadInfo() {
     console.log(city, latitude, longitude);
     const cityElement = document.querySelector(".cityGeo");
     cityElement.textContent = city;
-    loadWeatherData(latitude, longitude);
+    await loadWeatherData(latitude, longitude);
   }
   catch (err) {
     console.log(err);
@@ -20,6 +20,20 @@ async function loadWeatherData(latitude, longitude) {
     const response = await fetch(apiKey);
     const data = await response.json();
     console.log(data);
+
+    const tempElement = document.querySelector(".temp");
+    const windElement = document.querySelector(".wind");
+    const weatherCodeElement = document.querySelector(".weatherCode");
+    const rainMmElement = document.querySelector(".rainMm");
+
+    if (data && data.hourly) {
+      tempElement.textContent = data.hourly.temperature_2m?.value + "°C";
+      windElement.textContent = data.hourly.winddirection_10m?.value + "°";
+      weatherCodeElement.textContent = data.hourly.weathercode?.value;
+      rainMmElement.textContent = data.hourly.rain?.value + " mm";
+    } else {
+      console.log("Недоступны данные о погоде");
+    }
   } catch (error) {
     console.log(error);
   }
