@@ -1,4 +1,5 @@
-
+## Application link:
+https://leonzuev.github.io/weather-app/
 
 API для определения координат:
 https://www.geojs.io/docs/v1/endpoints/ip/
