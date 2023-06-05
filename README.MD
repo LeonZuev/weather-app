@@ -11,5 +11,3 @@ https://open-meteo.com/
 2. были стили шрифты картинки 
 3. деплой на gitPages
 4. Readme c описанием проекта и ссылкой на pages
-
-LALALA
