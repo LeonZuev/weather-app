@@ -38,4 +38,5 @@ async function loadWeatherData(latitude, longitude) {
     console.log(error);
   }
 }
+loadWeatherData(latitude, longitude);
 
