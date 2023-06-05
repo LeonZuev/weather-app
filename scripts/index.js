@@ -1,3 +1,5 @@
+
+
 async function loadInfo() {
   try {
     const response = await fetch("https://get.geojs.io/v1/ip/geo.json");
@@ -7,12 +9,10 @@ async function loadInfo() {
     const cityElement = document.querySelector(".cityGeo");
     cityElement.textContent = city;
     await loadWeatherData(latitude, longitude);
-  }
-  catch (err) {
+  } catch (err) {
     console.log(err);
   }
 }
-loadInfo();
 
 async function loadWeatherData(latitude, longitude) {
   try {
@@ -26,11 +26,13 @@ async function loadWeatherData(latitude, longitude) {
     const weatherCodeElement = document.querySelector(".weatherCode");
     const rainMmElement = document.querySelector(".rainMm");
 
-    if (data && data.hourly) {
-      tempElement.textContent = data.hourly.temperature_2m?.value + "°C";
-      windElement.textContent = data.hourly.winddirection_10m?.value + "°";
-      weatherCodeElement.textContent = data.hourly.weathercode?.value;
-      rainMmElement.textContent = data.hourly.rain?.value + " mm";
+    if (data && data.hourly && data.hourly.length > 0) {
+      const hourlyData = data.hourly[0];
+
+      tempElement.textContent = hourlyData.temperature_2m_1h?.value + "°C";
+      windElement.textContent = hourlyData.winddirection_10m_1h?.value + "°";
+      weatherCodeElement.textContent = hourlyData.weathercode?.value;
+      rainMmElement.textContent = hourlyData.rain_1h?.value + " mm";
     } else {
       console.log("Недоступны данные о погоде");
     }
@@ -38,5 +40,5 @@ async function loadWeatherData(latitude, longitude) {
     console.log(error);
   }
 }
-loadWeatherData(latitude, longitude);
 
+loadInfo();
