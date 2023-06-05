@@ -25,7 +25,6 @@ async function loadWeatherData(latitude, longitude) {
     const tempElement = document.getElementById("temp");
     const windElement = document.getElementById("wind");
     const weatherCodeElement = document.getElementById("weatherCode");
-    // const rainMmElement = document.getElementById("rainMm");
     console.log(data.current_weather);
     // ДЕСТРУКТУРИЗАЦИЯ
     const { temperature, windspeed, weathercode } = data.current_weather;
