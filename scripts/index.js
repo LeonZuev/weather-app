@@ -16,7 +16,7 @@ async function loadInfo() {
 
 async function loadWeatherData(latitude, longitude) {
   try {
-    const apiKey = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,rain,weathercode,winddirection_10m`;
+    const apiKey = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=temperature_2m,rain,weathercode,winddirection_10m`;
     const response = await fetch(apiKey);
     const data = await response.json();
     console.log(data);
