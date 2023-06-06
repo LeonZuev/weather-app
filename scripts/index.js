@@ -31,7 +31,7 @@ async function loadWeatherData(latitude, longitude) {
     console.log(temperature, windspeed, weathercode);
 
     tempElement.textContent = temperature + "°C";
-    windElement.textContent = windspeed + "°";
+    windElement.textContent = windspeed + " km/h";
     weatherCodeElement.textContent = weathercode;
   } catch (error) {
     console.log(error);
