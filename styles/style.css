@@ -1,73 +1,68 @@
 body {
-    background-color: #684a6b; /* Серый фон */
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  background-color: #684a6b;
+  /* Серый фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
 
-  }
-  
-  .mainPage {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    background-image: url("https://c4.wallpaperflare.com/wallpaper/977/151/606/pink-clouds-wallpaper-preview.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-     border-radius: 8px;
-     
+.mainPage {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/977/151/606/pink-clouds-wallpaper-preview.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align:center;
+.weatherCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/977/151/606/pink-clouds-wallpaper-preview.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 300px;
+  border-radius: 8px;
+  padding-top: 50%;
+}
 
-     
-     
-  }
-  
-  .weatherCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url("https://c4.wallpaperflare.com/wallpaper/977/151/606/pink-clouds-wallpaper-preview.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 200px; 
-    height: 300px;
-    border-radius: 8px;
-    padding-top:50%;    
-  }
-  
-  .cityTempCard,
-  .WindRainCloudCard {
-    margin-bottom: 20px;
-    font-family:monospace; /* Пример: Шрифт Pacifico с завитушками */
-    font-weight: bold;
-    font-size: 24px;
-    color: #100e49; 
+.cityTempCard,
+.WindRainCloudCard {
+  margin-bottom: 20px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 10px;
+  color: #100e49;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 23px;
+  background-image: linear-gradient(95deg, rgb(201, 5, 5), rgb(190, 124, 3), rgb(36, 36, 242));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 24px;
-    /* Пример: Плавное радужное перетекание */
-    background-image: linear-gradient(rgb(157, 21, 21),rgb(189, 112, 36), rgb(95, 91, 202), rgb(56, 144, 5), rgb(26, 110, 42));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.cityGeo,
+.temp,
+.wind,
+.weatherCode {
+  width: 150px;
+  height: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
 
- 
-  }
-  
-  .cityGeo,
-  .temp,
-  .wind,
-  .weatherCode {
-    width: 150px;
-    height: 20px;
-     /* Цвет балванки */
-     margin-bottom: 10px;    
-  }
-  
+.weatherCode {
+  margin: 15px;
+  font-size: 12px;
+}
