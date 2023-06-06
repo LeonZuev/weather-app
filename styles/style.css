@@ -24,6 +24,8 @@ body {
      align-items: center;
      justify-content: center;
      text-align:center;
+
+     
      
   }
   
@@ -37,9 +39,7 @@ body {
     width: 200px; 
     height: 300px;
     border-radius: 8px;
-    padding-top:50%;
-    
-    
+    padding-top:50%;    
   }
   
   .cityTempCard,
@@ -54,9 +54,10 @@ body {
     font-weight: bold;
     font-size: 24px;
     /* Пример: Плавное радужное перетекание */
-    background-image: linear-gradient( red, orange );
+    background-image: linear-gradient(rgb(157, 21, 21),rgb(189, 112, 36), rgb(95, 91, 202), rgb(56, 144, 5), rgb(26, 110, 42));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
  
   }
   
