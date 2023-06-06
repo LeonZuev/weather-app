@@ -1,5 +1,5 @@
 body {
-    background-color: #64765c; /* Серый фон */
+    background-color: #355172; /* Серый фон */
     display: flex;
     justify-content:center;
     align-items: center;
@@ -13,29 +13,44 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    background-image: url("https://images.pexels.com/photos/2559484/pexels-photo-2559484.jpeg?cs=srgb&dl=pexels-stacey-koenitz-r-2559484.jpg&fm=jpg");
+    background-image: url("https://st4.depositphotos.com/6787284/23453/i/450/depositphotos_234538346-stock-photo-clouds-blue-sky-background-blue.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
      border-radius: 8px;
+     
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align:center;
+     
   }
   
   .weatherCard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("https://images.pexels.com/photos/2559484/pexels-photo-2559484.jpeg?cs=srgb&dl=pexels-stacey-koenitz-r-2559484.jpg&fm=jpg");
+    background-image: url("https://st4.depositphotos.com/6787284/23453/i/450/depositphotos_234538346-stock-photo-clouds-blue-sky-background-blue.jpg");
     background-size: cover;
     background-position: center;
-    width: 300px; 
+    width: 200px; 
     height: 300px;
     border-radius: 8px;
+    padding-top:50%;
+    
+    
   }
   
   .cityTempCard,
   .WindRainCloudCard {
     margin-bottom: 20px;
-    
+    font-family:monospace; /* Пример: Шрифт Pacifico с завитушками */
+    font-weight: bold;
+    font-size: 24px;
+    color: #100e49; 
+    opacity: 1;
+    z-index: 1;
   }
   
   .cityGeo,
@@ -46,6 +61,8 @@ body {
     height: 20px;
      /* Цвет балванки */
      margin-bottom: 10px;
-     
+     opacity: 1; 
+    z-index: 1;
+        
   }
   
